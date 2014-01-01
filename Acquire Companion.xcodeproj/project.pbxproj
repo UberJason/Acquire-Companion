@@ -13,7 +13,6 @@
 		96C61C8A18748AD300E6CF99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96C61C8818748AD300E6CF99 /* InfoPlist.strings */; };
 		96C61C8C18748AD300E6CF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61C8B18748AD300E6CF99 /* main.m */; };
 		96C61C9018748AD300E6CF99 /* JYJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61C8F18748AD300E6CF99 /* JYJAppDelegate.m */; };
-		96C61C9318748AD300E6CF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C61C9118748AD300E6CF99 /* Main.storyboard */; };
 		96C61C9618748AD300E6CF99 /* JYJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61C9518748AD300E6CF99 /* JYJViewController.m */; };
 		96C61C9818748AD300E6CF99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C61C9718748AD300E6CF99 /* Images.xcassets */; };
 		96C61C9F18748AD300E6CF99 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C9E18748AD300E6CF99 /* XCTest.framework */; };
@@ -21,6 +20,8 @@
 		96C61CA118748AD300E6CF99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C8318748AD300E6CF99 /* UIKit.framework */; };
 		96C61CA918748AD300E6CF99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96C61CA718748AD300E6CF99 /* InfoPlist.strings */; };
 		96C61CAB18748AD300E6CF99 /* Acquire_CompanionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CAA18748AD300E6CF99 /* Acquire_CompanionTests.m */; };
+		96C61CB818748BC600E6CF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C61CB718748BC600E6CF99 /* Main.storyboard */; };
+		96C61CBB18748E4A00E6CF99 /* JYJPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CBA18748E4A00E6CF99 /* JYJPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		96C61C8D18748AD300E6CF99 /* Acquire Companion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acquire Companion-Prefix.pch"; sourceTree = "<group>"; };
 		96C61C8E18748AD300E6CF99 /* JYJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYJAppDelegate.h; sourceTree = "<group>"; };
 		96C61C8F18748AD300E6CF99 /* JYJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYJAppDelegate.m; sourceTree = "<group>"; };
-		96C61C9218748AD300E6CF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96C61C9418748AD300E6CF99 /* JYJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYJViewController.h; sourceTree = "<group>"; };
 		96C61C9518748AD300E6CF99 /* JYJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYJViewController.m; sourceTree = "<group>"; };
 		96C61C9718748AD300E6CF99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,10 @@
 		96C61CA618748AD300E6CF99 /* Acquire CompanionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Acquire CompanionTests-Info.plist"; sourceTree = "<group>"; };
 		96C61CA818748AD300E6CF99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96C61CAA18748AD300E6CF99 /* Acquire_CompanionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Acquire_CompanionTests.m; sourceTree = "<group>"; };
+		96C61CB718748BC600E6CF99 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		96C61CB918748E4A00E6CF99 /* JYJPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJPlayer.h; path = Model/JYJPlayer.h; sourceTree = "<group>"; };
+		96C61CBA18748E4A00E6CF99 /* JYJPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJPlayer.m; path = Model/JYJPlayer.m; sourceTree = "<group>"; };
+		96C61CBD1874902600E6CF99 /* JYJAcquireConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJAcquireConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +116,10 @@
 		96C61C8518748AD300E6CF99 /* Acquire Companion */ = {
 			isa = PBXGroup;
 			children = (
+				96C61CBC18748E5000E6CF99 /* Model */,
+				96C61CB718748BC600E6CF99 /* Main.storyboard */,
 				96C61C8E18748AD300E6CF99 /* JYJAppDelegate.h */,
 				96C61C8F18748AD300E6CF99 /* JYJAppDelegate.m */,
-				96C61C9118748AD300E6CF99 /* Main.storyboard */,
 				96C61C9418748AD300E6CF99 /* JYJViewController.h */,
 				96C61C9518748AD300E6CF99 /* JYJViewController.m */,
 				96C61C9718748AD300E6CF99 /* Images.xcassets */,
@@ -126,6 +131,7 @@
 		96C61C8618748AD300E6CF99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96C61CBD1874902600E6CF99 /* JYJAcquireConstants.h */,
 				96C61C8718748AD300E6CF99 /* Acquire Companion-Info.plist */,
 				96C61C8818748AD300E6CF99 /* InfoPlist.strings */,
 				96C61C8B18748AD300E6CF99 /* main.m */,
@@ -150,6 +156,15 @@
 				96C61CA718748AD300E6CF99 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96C61CBC18748E5000E6CF99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96C61CB918748E4A00E6CF99 /* JYJPlayer.h */,
+				96C61CBA18748E4A00E6CF99 /* JYJPlayer.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +215,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jason Ji";
 				TargetAttributes = {
+					96C61C7B18748AD300E6CF99 = {
+						DevelopmentTeam = 2GPQ8GE99T;
+					};
 					96C61C9C18748AD300E6CF99 = {
 						TestTargetID = 96C61C7B18748AD300E6CF99;
 					};
@@ -229,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C61CB818748BC600E6CF99 /* Main.storyboard in Resources */,
 				96C61C9818748AD300E6CF99 /* Images.xcassets in Resources */,
 				96C61C8A18748AD300E6CF99 /* InfoPlist.strings in Resources */,
-				96C61C9318748AD300E6CF99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C61CBB18748E4A00E6CF99 /* JYJPlayer.m in Sources */,
 				96C61C9018748AD300E6CF99 /* JYJAppDelegate.m in Sources */,
 				96C61C8C18748AD300E6CF99 /* main.m in Sources */,
 				96C61C9618748AD300E6CF99 /* JYJViewController.m in Sources */,
@@ -281,14 +300,6 @@
 				96C61C8918748AD300E6CF99 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		96C61C9118748AD300E6CF99 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96C61C9218748AD300E6CF99 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		96C61CA718748AD300E6CF99 /* InfoPlist.strings */ = {
@@ -379,10 +390,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Acquire Companion/Acquire Companion-Prefix.pch";
 				INFOPLIST_FILE = "Acquire Companion/Acquire Companion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,10 +406,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Acquire Companion/Acquire Companion-Prefix.pch";
 				INFOPLIST_FILE = "Acquire Companion/Acquire Companion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

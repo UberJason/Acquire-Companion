@@ -15,3 +15,9 @@
 #define CONTINENTAL @"Continental"
 
 #define MAX_SHARES 25
+
+typedef enum {
+    HotelClassSmall,
+    HotelClassMedium,
+    HotelClassLarge
+}HotelClass;

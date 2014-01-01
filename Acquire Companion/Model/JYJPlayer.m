@@ -24,7 +24,7 @@
     return _sharesOfStock;
 }
 
--(void)addStock:(NSString *)hotelName numberOfShares:(NSInteger)shares {
+-(void)buyStock:(NSString *)hotelName numberOfShares:(NSInteger)shares {
     NSInteger currentShares = [self.sharesOfStock[hotelName] integerValue];
     currentShares += shares;
     
@@ -32,7 +32,7 @@
         self.sharesOfStock[hotelName] = @(currentShares);
 }
 
--(void)removeStock:(NSString *)hotelName numberOfShares:(NSInteger)shares {
+-(void)sellStock:(NSString *)hotelName numberOfShares:(NSInteger)shares {
     NSInteger currentShares = [self.sharesOfStock[hotelName] integerValue];
     currentShares -= shares;
     

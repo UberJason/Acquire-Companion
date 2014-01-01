@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSMutableDictionary *sharesOfStock;
 
--(void)addStock:(NSString *)hotelName numberOfShares:(NSInteger)shares;
--(void)removeStock:(NSString *)hotelNAme numberOfShares:(NSInteger)shares;
+-(void)buyStock:(NSString *)hotelName numberOfShares:(NSInteger)shares;
+-(void)sellStock:(NSString *)hotelName numberOfShares:(NSInteger)shares;
 
 @end

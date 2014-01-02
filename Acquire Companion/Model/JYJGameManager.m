@@ -39,6 +39,10 @@
     return self;
 }
 
++(NSArray *)hotelNames {
+    return @[TOWER, LUXOR, AMERICAN, WORLDWIDE, FESTIVAL, IMPERIAL, CONTINENTAL];
+}
+
 -(void)addStock:(NSString *)hotelName toPlayer:(JYJPlayer *)player numberOfShares:(NSInteger)numberOfShares {
     JYJHotel *hotel = self.hotels[hotelName];
     if(hotel.sharesRemaining - numberOfShares >= 0) {

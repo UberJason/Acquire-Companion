@@ -17,8 +17,6 @@
 		96C61C9F18748AD300E6CF99 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C9E18748AD300E6CF99 /* XCTest.framework */; };
 		96C61CA018748AD300E6CF99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C7F18748AD300E6CF99 /* Foundation.framework */; };
 		96C61CA118748AD300E6CF99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C8318748AD300E6CF99 /* UIKit.framework */; };
-		96C61CA918748AD300E6CF99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96C61CA718748AD300E6CF99 /* InfoPlist.strings */; };
-		96C61CAB18748AD300E6CF99 /* Acquire_CompanionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CAA18748AD300E6CF99 /* Acquire_CompanionTests.m */; };
 		96C61CB818748BC600E6CF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C61CB718748BC600E6CF99 /* Main.storyboard */; };
 		96C61CBB18748E4A00E6CF99 /* JYJPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CBA18748E4A00E6CF99 /* JYJPlayer.m */; };
 		96C61CC21874925500E6CF99 /* JYJGameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CC11874925500E6CF99 /* JYJGameManager.m */; };
@@ -28,6 +26,9 @@
 		96C61CCF1874988C00E6CF99 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 96C61CC91874988C00E6CF99 /* LICENSE */; };
 		96C61CD01874988C00E6CF99 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96C61CCA1874988C00E6CF99 /* README.md */; };
 		96C61CD11874988C00E6CF99 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CCC1874988C00E6CF99 /* UIColor+FlatUI.m */; };
+		96C61CD41874B8AF00E6CF99 /* JYJPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CD31874B8AF00E6CF99 /* JYJPlayerViewController.m */; };
+		96C61CD71874BC8B00E6CF99 /* JYJStockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CD61874BC8B00E6CF99 /* JYJStockCell.m */; };
+		96C61CDB1874BD3600E6CF99 /* UIButtonWithIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C61CDA1874BD3600E6CF99 /* UIButtonWithIndexPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +55,6 @@
 		96C61C9718748AD300E6CF99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96C61C9D18748AD300E6CF99 /* Acquire CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acquire CompanionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C61C9E18748AD300E6CF99 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		96C61CA618748AD300E6CF99 /* Acquire CompanionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Acquire CompanionTests-Info.plist"; sourceTree = "<group>"; };
-		96C61CA818748AD300E6CF99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		96C61CAA18748AD300E6CF99 /* Acquire_CompanionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Acquire_CompanionTests.m; sourceTree = "<group>"; };
 		96C61CB718748BC600E6CF99 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		96C61CB918748E4A00E6CF99 /* JYJPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJPlayer.h; path = Model/JYJPlayer.h; sourceTree = "<group>"; };
 		96C61CBA18748E4A00E6CF99 /* JYJPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJPlayer.m; path = Model/JYJPlayer.m; sourceTree = "<group>"; };
@@ -71,6 +69,12 @@
 		96C61CCA1874988C00E6CF99 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		96C61CCB1874988C00E6CF99 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
 		96C61CCC1874988C00E6CF99 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		96C61CD21874B8AF00E6CF99 /* JYJPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJPlayerViewController.h; sourceTree = "<group>"; };
+		96C61CD31874B8AF00E6CF99 /* JYJPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJPlayerViewController.m; sourceTree = "<group>"; };
+		96C61CD51874BC8B00E6CF99 /* JYJStockCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJStockCell.h; path = "UI Subclasses/JYJStockCell.h"; sourceTree = "<group>"; };
+		96C61CD61874BC8B00E6CF99 /* JYJStockCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJStockCell.m; path = "UI Subclasses/JYJStockCell.m"; sourceTree = "<group>"; };
+		96C61CD91874BD3600E6CF99 /* UIButtonWithIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonWithIndexPath.h; sourceTree = "<group>"; };
+		96C61CDA1874BD3600E6CF99 /* UIButtonWithIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonWithIndexPath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,6 @@
 			children = (
 				96C61CC61874988C00E6CF99 /* CocoaFlatUIColor */,
 				96C61C8518748AD300E6CF99 /* Acquire Companion */,
-				96C61CA418748AD300E6CF99 /* Acquire CompanionTests */,
 				96C61C7E18748AD300E6CF99 /* Frameworks */,
 				96C61C7D18748AD300E6CF99 /* Products */,
 			);
@@ -132,6 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				96C61CBC18748E5000E6CF99 /* Model */,
+				96C61CD81874BC9200E6CF99 /* UI Subclasses */,
+				96C61CD21874B8AF00E6CF99 /* JYJPlayerViewController.h */,
+				96C61CD31874B8AF00E6CF99 /* JYJPlayerViewController.m */,
 				96C61CB718748BC600E6CF99 /* Main.storyboard */,
 				96C61C8E18748AD300E6CF99 /* JYJAppDelegate.h */,
 				96C61C8F18748AD300E6CF99 /* JYJAppDelegate.m */,
@@ -149,24 +155,6 @@
 				96C61C8818748AD300E6CF99 /* InfoPlist.strings */,
 				96C61C8B18748AD300E6CF99 /* main.m */,
 				96C61C8D18748AD300E6CF99 /* Acquire Companion-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		96C61CA418748AD300E6CF99 /* Acquire CompanionTests */ = {
-			isa = PBXGroup;
-			children = (
-				96C61CAA18748AD300E6CF99 /* Acquire_CompanionTests.m */,
-				96C61CA518748AD300E6CF99 /* Supporting Files */,
-			);
-			path = "Acquire CompanionTests";
-			sourceTree = "<group>";
-		};
-		96C61CA518748AD300E6CF99 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				96C61CA618748AD300E6CF99 /* Acquire CompanionTests-Info.plist */,
-				96C61CA718748AD300E6CF99 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -195,6 +183,17 @@
 				96C61CCC1874988C00E6CF99 /* UIColor+FlatUI.m */,
 			);
 			path = CocoaFlatUIColor;
+			sourceTree = "<group>";
+		};
+		96C61CD81874BC9200E6CF99 /* UI Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				96C61CD91874BD3600E6CF99 /* UIButtonWithIndexPath.h */,
+				96C61CDA1874BD3600E6CF99 /* UIButtonWithIndexPath.m */,
+				96C61CD51874BC8B00E6CF99 /* JYJStockCell.h */,
+				96C61CD61874BC8B00E6CF99 /* JYJStockCell.m */,
+			);
+			name = "UI Subclasses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C61CA918748AD300E6CF99 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +302,11 @@
 			files = (
 				96C61CC21874925500E6CF99 /* JYJGameManager.m in Sources */,
 				96C61CBB18748E4A00E6CF99 /* JYJPlayer.m in Sources */,
+				96C61CD71874BC8B00E6CF99 /* JYJStockCell.m in Sources */,
 				96C61C9018748AD300E6CF99 /* JYJAppDelegate.m in Sources */,
+				96C61CD41874B8AF00E6CF99 /* JYJPlayerViewController.m in Sources */,
 				96C61CD11874988C00E6CF99 /* UIColor+FlatUI.m in Sources */,
+				96C61CDB1874BD3600E6CF99 /* UIButtonWithIndexPath.m in Sources */,
 				96C61C8C18748AD300E6CF99 /* main.m in Sources */,
 				96C61CC5187495A900E6CF99 /* JYJHotel.m in Sources */,
 			);
@@ -315,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C61CAB18748AD300E6CF99 /* Acquire_CompanionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,14 +334,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				96C61C8918748AD300E6CF99 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		96C61CA718748AD300E6CF99 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96C61CA818748AD300E6CF99 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

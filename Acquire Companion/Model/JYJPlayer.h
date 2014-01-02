@@ -13,6 +13,8 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSMutableDictionary *sharesOfStock;
 
+-(JYJPlayer *)initWithName:(NSString *)name;
+
 -(void)buyStock:(NSString *)hotelName numberOfShares:(NSInteger)shares;
 -(void)sellStock:(NSString *)hotelName numberOfShares:(NSInteger)shares;
 

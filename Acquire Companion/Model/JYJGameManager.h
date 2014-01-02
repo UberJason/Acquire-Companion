@@ -17,6 +17,8 @@
 
 -(JYJGameManager *)initWithPlayers:(NSMutableArray *)players;
 
++(NSArray *)hotelNames;
+
 -(void)addStock:(NSString *)hotelName toPlayer:(JYJPlayer *)player numberOfShares:(NSInteger)numberOfShares;
 -(void)removeStock:(NSString *)hotelName fromPlayer:(JYJPlayer *)player numberOfShares:(NSInteger)numberOfShares;
 -(NSArray *)majorityOwnersForHotel:(JYJHotel *)hotel;

@@ -10,6 +10,14 @@
 
 @implementation JYJPlayer
 
+-(JYJPlayer *)initWithName:(NSString *)name {
+    self = [self init];
+    if(self) {
+        _name = name;
+    }
+    return self;
+}
+
 -(NSMutableDictionary *)sharesOfStock {
     if(!_sharesOfStock) {
         _sharesOfStock = [NSMutableDictionary new];

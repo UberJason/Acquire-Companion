@@ -167,10 +167,10 @@
     JYJPlayer *player = self.model.players[sender.indexOfTableView];
     JYJHotel *hotel = self.model.hotels[ [JYJGameManager hotelNames][sender.indexPath.row] ];
     
-    NSLog(@"Player: %@", player.name);
-    NSLog(@"Hotel: %@", hotel.name);
-    NSLog(@"Player stock before change: %d", [player.sharesOfStock[hotel.name] integerValue]);
-    NSLog(@"Hotel stock remaining before change: %d", hotel.sharesRemaining);
+//    NSLog(@"Player: %@", player.name);
+//    NSLog(@"Hotel: %@", hotel.name);
+//    NSLog(@"Player stock before change: %d", [player.sharesOfStock[hotel.name] integerValue]);
+//    NSLog(@"Hotel stock remaining before change: %d", hotel.sharesRemaining);
     
     if(sender == cell.plus1Button) {
         NSLog(@"+1");
@@ -197,8 +197,8 @@
         [self.model removeStock:hotel.name fromPlayer:player numberOfShares:3];
     }
 
-    NSLog(@"Player stock after change: %d", [player.sharesOfStock[hotel.name] integerValue]);
-    NSLog(@"Hotel stock remaining after change: %d", hotel.sharesRemaining);
+//    NSLog(@"Player stock after change: %d", [player.sharesOfStock[hotel.name] integerValue]); 
+//    NSLog(@"Hotel stock remaining after change: %d", hotel.sharesRemaining);
 
     [tableView reloadData];
 }

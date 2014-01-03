@@ -1,0 +1,18 @@
+Jason			Mary Anne
+Tower: 2		Tower: 1
+  +1 +2 +3
+  -1 -2 -3
+Luxor: 3		Luxor: 1
+American: 2		American: 4
+Festival: 2		Festival: 5
+Worldwide: 2		Worldwide: 1
+Continental: 1		Continental: 0
+Imperial: 3		Imperial: 0
+
+
+Tower ($400)
+Size: 4
+Shares remaining: 20
+
+First: Jason (8)
+Second: Mary Anne (4), Dad (4)

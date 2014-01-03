@@ -11,5 +11,6 @@
 @interface UIButtonWithIndexPath : UIButton
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
+@property (nonatomic) NSInteger indexOfTableView;
 
 @end

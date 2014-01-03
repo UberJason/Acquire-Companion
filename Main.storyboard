@@ -41,71 +41,91 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tc-LO-tTU" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="61" width="30" height="30"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdh-eS-Q93">
+                                                    <rect key="frame" x="20" y="55" width="210" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-HR-Lst" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGP-rw-3jq" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs5-gR-XeO" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5r-Xy-7hg" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWb-V4-e5P" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tc-LO-tTU" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="ZQp-t9-gkQ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-HR-Lst" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="UrT-us-jHZ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGP-rw-3jq" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="hWf-MG-FeT"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs5-gR-XeO" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="7qd-Tj-PSN"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5r-Xy-7hg" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="ApO-do-W27"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWb-V4-e5P" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="lkg-98-t9W"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="Kjw-fV-mib"/>
+                                                        <constraint firstAttribute="width" constant="210" id="wy1-bH-myc"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="X5r-Xy-7hg" secondAttribute="bottom" constant="20" id="3pL-Kd-arR"/>
-                                                <constraint firstItem="Bs5-gR-XeO" firstAttribute="leading" secondItem="zCl-0m-MmO" secondAttribute="leading" constant="72" id="8sh-4d-tfj"/>
-                                                <constraint firstAttribute="trailing" secondItem="kWb-V4-e5P" secondAttribute="trailing" constant="72" id="DBG-tn-9Qu"/>
-                                                <constraint firstItem="dEm-HR-Lst" firstAttribute="top" secondItem="zCl-0m-MmO" secondAttribute="top" constant="61" id="DIJ-Nf-mlL"/>
-                                                <constraint firstItem="kWb-V4-e5P" firstAttribute="centerY" secondItem="Bs5-gR-XeO" secondAttribute="centerY" id="Hcn-GG-Kx3"/>
-                                                <constraint firstItem="X5r-Xy-7hg" firstAttribute="leading" secondItem="Bs5-gR-XeO" secondAttribute="trailing" constant="8" id="Sj1-r1-azh"/>
-                                                <constraint firstItem="kWb-V4-e5P" firstAttribute="centerY" secondItem="X5r-Xy-7hg" secondAttribute="centerY" id="Z7q-u9-sxd"/>
+                                                <constraint firstItem="Jdh-eS-Q93" firstAttribute="top" secondItem="zCl-0m-MmO" secondAttribute="top" constant="55" id="Xfj-B2-Dh7"/>
                                                 <constraint firstItem="doz-52-5RN" firstAttribute="leading" secondItem="zCl-0m-MmO" secondAttribute="leading" constant="20" id="b26-W1-J3Y"/>
-                                                <constraint firstItem="UGP-rw-3jq" firstAttribute="leading" secondItem="dEm-HR-Lst" secondAttribute="trailing" constant="8" id="b6I-HZ-CZg"/>
                                                 <constraint firstItem="doz-52-5RN" firstAttribute="top" secondItem="zCl-0m-MmO" secondAttribute="top" constant="20" id="i8h-e5-e9V"/>
                                                 <constraint firstAttribute="trailing" secondItem="h4g-uW-mSe" secondAttribute="trailing" constant="20" id="jhE-1e-SJj"/>
-                                                <constraint firstItem="dEm-HR-Lst" firstAttribute="leading" secondItem="2tc-LO-tTU" secondAttribute="trailing" constant="8" id="k8R-Y8-Ngf"/>
-                                                <constraint firstAttribute="trailing" secondItem="UGP-rw-3jq" secondAttribute="trailing" constant="72" id="p04-0F-shU"/>
-                                                <constraint firstItem="UGP-rw-3jq" firstAttribute="centerY" secondItem="2tc-LO-tTU" secondAttribute="centerY" id="qBY-XA-HgI"/>
-                                                <constraint firstItem="UGP-rw-3jq" firstAttribute="centerY" secondItem="dEm-HR-Lst" secondAttribute="centerY" id="qMX-MM-vcz"/>
-                                                <constraint firstItem="2tc-LO-tTU" firstAttribute="leading" secondItem="zCl-0m-MmO" secondAttribute="leading" constant="72" id="sPe-gb-ugB"/>
+                                                <constraint firstAttribute="centerX" secondItem="Jdh-eS-Q93" secondAttribute="centerX" id="jtT-dk-pEx"/>
                                                 <constraint firstItem="h4g-uW-mSe" firstAttribute="top" secondItem="zCl-0m-MmO" secondAttribute="top" constant="20" id="vCG-Hg-Xrz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="amountLabel" destination="h4g-uW-mSe" id="5X6-jv-VJw"/>
+                                            <outlet property="detailsPanel" destination="Jdh-eS-Q93" id="YiZ-cj-ODj"/>
+                                            <outlet property="detailsPanelHeight" destination="Kjw-fV-mib" id="ncm-FP-K8f"/>
                                             <outlet property="minus1Button" destination="Bs5-gR-XeO" id="XD9-MQ-iNU"/>
                                             <outlet property="minus2Button" destination="X5r-Xy-7hg" id="9b8-z9-iGy"/>
                                             <outlet property="minus3Button" destination="kWb-V4-e5P" id="bgk-sH-Fut"/>
@@ -117,305 +137,365 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-Ay-21z">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="MYl-Bf-qrh">
                                 <rect key="frame" x="258" y="20" width="250" height="728"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stockCell" rowHeight="150" id="IcB-bS-xFL" customClass="JYJStockCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stockCell" rowHeight="150" id="GLO-D4-28w" customClass="JYJStockCell">
                                         <rect key="frame" x="0.0" y="55" width="250" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IcB-bS-xFL" id="ofc-lO-b8G">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GLO-D4-28w" id="jml-fi-CV1">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoK-LP-NMl">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhB-tE-bTn">
                                                     <rect key="frame" x="20" y="20" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unh-7o-EXu">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83a-P7-BbK">
                                                     <rect key="frame" x="188" y="20" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRb-YR-CUc" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="61" width="30" height="30"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgI-89-QOV">
+                                                    <rect key="frame" x="20" y="55" width="210" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWz-yV-RgR" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyw-rZ-Qr1" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojr-jq-0EH" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-az-zeY" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ay-6D-kP1" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVf-hp-Bvk" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="hbj-He-VrU"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCB-Ng-klB" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="IX5-gz-RWa"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJH-0L-2cb" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="yMK-IQ-7NI"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-8G-CDz" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="1LT-ZP-jk6"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gd2-hi-afe" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="arT-fJ-iDj"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-Q9-Ky6" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="J3I-yZ-aXC"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="210" id="721-Xx-D53"/>
+                                                        <constraint firstAttribute="height" constant="75" id="J9b-i6-Z5E"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Unh-7o-EXu" secondAttribute="trailing" constant="20" id="0oj-aX-Qa2"/>
-                                                <constraint firstAttribute="trailing" secondItem="3Ay-6D-kP1" secondAttribute="trailing" constant="72" id="39i-JW-SaN"/>
-                                                <constraint firstAttribute="trailing" secondItem="dyw-rZ-Qr1" secondAttribute="trailing" constant="72" id="5Ub-9U-b0e"/>
-                                                <constraint firstItem="SoK-LP-NMl" firstAttribute="top" secondItem="ofc-lO-b8G" secondAttribute="top" constant="20" id="76e-cI-76S"/>
-                                                <constraint firstItem="gWz-yV-RgR" firstAttribute="leading" secondItem="LRb-YR-CUc" secondAttribute="trailing" constant="8" id="8yf-jm-fwz"/>
-                                                <constraint firstItem="dyw-rZ-Qr1" firstAttribute="centerY" secondItem="gWz-yV-RgR" secondAttribute="centerY" id="9BS-h8-8rW"/>
-                                                <constraint firstItem="1E5-az-zeY" firstAttribute="leading" secondItem="ojr-jq-0EH" secondAttribute="trailing" constant="8" id="Aup-S2-D8O"/>
-                                                <constraint firstAttribute="bottom" secondItem="1E5-az-zeY" secondAttribute="bottom" constant="20" id="Bbd-4Y-s2d"/>
-                                                <constraint firstItem="SoK-LP-NMl" firstAttribute="leading" secondItem="ofc-lO-b8G" secondAttribute="leading" constant="20" id="CvV-t5-icN"/>
-                                                <constraint firstItem="3Ay-6D-kP1" firstAttribute="centerY" secondItem="1E5-az-zeY" secondAttribute="centerY" id="Uew-Ni-JL4"/>
-                                                <constraint firstItem="Unh-7o-EXu" firstAttribute="top" secondItem="ofc-lO-b8G" secondAttribute="top" constant="20" id="VDP-DY-xMC"/>
-                                                <constraint firstItem="3Ay-6D-kP1" firstAttribute="centerY" secondItem="ojr-jq-0EH" secondAttribute="centerY" id="WA5-Kp-Z7h"/>
-                                                <constraint firstItem="ojr-jq-0EH" firstAttribute="leading" secondItem="ofc-lO-b8G" secondAttribute="leading" constant="72" id="kLh-8Z-ZKt"/>
-                                                <constraint firstItem="gWz-yV-RgR" firstAttribute="top" secondItem="ofc-lO-b8G" secondAttribute="top" constant="61" id="pts-BH-Og9"/>
-                                                <constraint firstItem="LRb-YR-CUc" firstAttribute="leading" secondItem="ofc-lO-b8G" secondAttribute="leading" constant="72" id="q8L-Mc-cSa"/>
-                                                <constraint firstItem="dyw-rZ-Qr1" firstAttribute="leading" secondItem="gWz-yV-RgR" secondAttribute="trailing" constant="8" id="xsd-Kc-4TH"/>
-                                                <constraint firstItem="dyw-rZ-Qr1" firstAttribute="centerY" secondItem="LRb-YR-CUc" secondAttribute="centerY" id="zhN-TH-dUa"/>
+                                                <constraint firstAttribute="trailing" secondItem="83a-P7-BbK" secondAttribute="trailing" constant="20" id="4HM-Db-6FI"/>
+                                                <constraint firstItem="PgI-89-QOV" firstAttribute="top" secondItem="jml-fi-CV1" secondAttribute="top" constant="55" id="91W-HM-fMi"/>
+                                                <constraint firstItem="DhB-tE-bTn" firstAttribute="top" secondItem="jml-fi-CV1" secondAttribute="top" constant="20" id="Yz6-M8-1AN"/>
+                                                <constraint firstItem="DhB-tE-bTn" firstAttribute="leading" secondItem="jml-fi-CV1" secondAttribute="leading" constant="20" id="pte-V3-NXi"/>
+                                                <constraint firstAttribute="centerX" secondItem="PgI-89-QOV" secondAttribute="centerX" id="vYK-nD-Cak"/>
+                                                <constraint firstItem="83a-P7-BbK" firstAttribute="top" secondItem="jml-fi-CV1" secondAttribute="top" constant="20" id="yIH-fs-xbg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="Unh-7o-EXu" id="Lom-G7-bP9"/>
-                                            <outlet property="minus1Button" destination="ojr-jq-0EH" id="fXB-WA-SzV"/>
-                                            <outlet property="minus2Button" destination="1E5-az-zeY" id="bUN-x8-h0G"/>
-                                            <outlet property="minus3Button" destination="3Ay-6D-kP1" id="D0q-RD-m2M"/>
-                                            <outlet property="plus1Button" destination="LRb-YR-CUc" id="ZP8-Op-m8f"/>
-                                            <outlet property="plus2Button" destination="gWz-yV-RgR" id="rcg-oj-FKk"/>
-                                            <outlet property="plus3Button" destination="dyw-rZ-Qr1" id="mYo-i5-cLO"/>
-                                            <outlet property="stockNameLabel" destination="SoK-LP-NMl" id="Wcj-G0-bLL"/>
+                                            <outlet property="amountLabel" destination="83a-P7-BbK" id="g4s-9V-6IX"/>
+                                            <outlet property="detailsPanel" destination="PgI-89-QOV" id="XR3-bq-ELC"/>
+                                            <outlet property="detailsPanelHeight" destination="J9b-i6-Z5E" id="odX-Up-87O"/>
+                                            <outlet property="minus1Button" destination="PJW-8G-CDz" id="D4d-xv-aNT"/>
+                                            <outlet property="minus2Button" destination="Gd2-hi-afe" id="ws9-1x-e7o"/>
+                                            <outlet property="minus3Button" destination="Kgo-Q9-Ky6" id="OEb-lX-HxQ"/>
+                                            <outlet property="plus1Button" destination="LVf-hp-Bvk" id="B67-8K-Mih"/>
+                                            <outlet property="plus2Button" destination="HCB-Ng-klB" id="15o-th-bG2"/>
+                                            <outlet property="plus3Button" destination="tJH-0L-2cb" id="o5w-kS-jfI"/>
+                                            <outlet property="stockNameLabel" destination="DhB-tE-bTn" id="uZX-AP-0FC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-AY-S8M">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="A2k-Je-pBo">
                                 <rect key="frame" x="516" y="20" width="250" height="728"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stockCell" rowHeight="150" id="Lfo-ir-YRw" customClass="JYJStockCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stockCell" rowHeight="150" id="co4-1M-JaR" customClass="JYJStockCell">
                                         <rect key="frame" x="0.0" y="55" width="250" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lfo-ir-YRw" id="fEU-Xt-f0Q">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="co4-1M-JaR" id="WRw-2v-PBY">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBb-Um-trW">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og7-Ei-91k">
                                                     <rect key="frame" x="20" y="20" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOj-RQ-f2w">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29B-Mo-V40">
                                                     <rect key="frame" x="188" y="20" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD3-VK-7i5" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="61" width="30" height="30"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lk1-M3-usF">
+                                                    <rect key="frame" x="20" y="55" width="210" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wI-9C-7hk" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESX-6G-O9a" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYV-4E-laK" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVn-qO-Sv3" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-ZC-uF4" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-zv-wlr" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="jmg-rY-L8f"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eio-UT-Vfv" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="A6b-kD-vTO"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-B0-5qM" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="zFq-bM-YDg"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTR-TX-l7T" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="e0n-S6-Zwf"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHn-kY-4Fk" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="4jz-S0-mkk"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4A-eE-0w0" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="GnP-6O-DgJ"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="ck2-HW-nbT"/>
+                                                        <constraint firstAttribute="width" constant="210" id="yXV-cp-PbT"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tOj-RQ-f2w" firstAttribute="top" secondItem="fEU-Xt-f0Q" secondAttribute="top" constant="20" id="5kD-Yb-rJk"/>
-                                                <constraint firstItem="ESX-6G-O9a" firstAttribute="leading" secondItem="3wI-9C-7hk" secondAttribute="trailing" constant="8" id="8Jw-VT-47A"/>
-                                                <constraint firstAttribute="trailing" secondItem="qBv-ZC-uF4" secondAttribute="trailing" constant="72" id="93Y-tv-Egd"/>
-                                                <constraint firstItem="vBb-Um-trW" firstAttribute="top" secondItem="fEU-Xt-f0Q" secondAttribute="top" constant="20" id="HZ5-zs-h76"/>
-                                                <constraint firstItem="MD3-VK-7i5" firstAttribute="leading" secondItem="fEU-Xt-f0Q" secondAttribute="leading" constant="72" id="NPo-Ks-UOq"/>
-                                                <constraint firstItem="3wI-9C-7hk" firstAttribute="top" secondItem="fEU-Xt-f0Q" secondAttribute="top" constant="61" id="OIl-am-Rmm"/>
-                                                <constraint firstItem="vBb-Um-trW" firstAttribute="leading" secondItem="fEU-Xt-f0Q" secondAttribute="leading" constant="20" id="OY6-jK-d5d"/>
-                                                <constraint firstAttribute="trailing" secondItem="tOj-RQ-f2w" secondAttribute="trailing" constant="20" id="OwA-bX-5zn"/>
-                                                <constraint firstAttribute="trailing" secondItem="ESX-6G-O9a" secondAttribute="trailing" constant="72" id="Pye-FR-rXC"/>
-                                                <constraint firstItem="ESX-6G-O9a" firstAttribute="centerY" secondItem="3wI-9C-7hk" secondAttribute="centerY" id="SWm-F1-hUh"/>
-                                                <constraint firstItem="qBv-ZC-uF4" firstAttribute="centerY" secondItem="WYV-4E-laK" secondAttribute="centerY" id="XVe-lj-StW"/>
-                                                <constraint firstItem="WYV-4E-laK" firstAttribute="leading" secondItem="fEU-Xt-f0Q" secondAttribute="leading" constant="72" id="bmL-gm-2RD"/>
-                                                <constraint firstItem="lVn-qO-Sv3" firstAttribute="leading" secondItem="WYV-4E-laK" secondAttribute="trailing" constant="8" id="fZe-Vb-6ar"/>
-                                                <constraint firstItem="ESX-6G-O9a" firstAttribute="centerY" secondItem="MD3-VK-7i5" secondAttribute="centerY" id="s0W-4a-8WC"/>
-                                                <constraint firstAttribute="bottom" secondItem="lVn-qO-Sv3" secondAttribute="bottom" constant="20" id="w0h-Iu-wxD"/>
-                                                <constraint firstItem="qBv-ZC-uF4" firstAttribute="centerY" secondItem="lVn-qO-Sv3" secondAttribute="centerY" id="wM2-9J-yKM"/>
-                                                <constraint firstItem="3wI-9C-7hk" firstAttribute="leading" secondItem="MD3-VK-7i5" secondAttribute="trailing" constant="8" id="yBq-0A-6vw"/>
+                                                <constraint firstItem="Lk1-M3-usF" firstAttribute="top" secondItem="WRw-2v-PBY" secondAttribute="top" constant="55" id="6PF-27-hA2"/>
+                                                <constraint firstAttribute="centerX" secondItem="Lk1-M3-usF" secondAttribute="centerX" id="EOL-OH-Ao2"/>
+                                                <constraint firstItem="Og7-Ei-91k" firstAttribute="leading" secondItem="WRw-2v-PBY" secondAttribute="leading" constant="20" id="QrC-Tn-9oJ"/>
+                                                <constraint firstItem="Og7-Ei-91k" firstAttribute="top" secondItem="WRw-2v-PBY" secondAttribute="top" constant="20" id="V09-bs-VWL"/>
+                                                <constraint firstAttribute="trailing" secondItem="29B-Mo-V40" secondAttribute="trailing" constant="20" id="u0P-zw-3a7"/>
+                                                <constraint firstItem="29B-Mo-V40" firstAttribute="top" secondItem="WRw-2v-PBY" secondAttribute="top" constant="20" id="z2f-Jx-ILn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="tOj-RQ-f2w" id="8Ho-90-0dt"/>
-                                            <outlet property="minus1Button" destination="WYV-4E-laK" id="1PH-Kg-BD8"/>
-                                            <outlet property="minus2Button" destination="lVn-qO-Sv3" id="ubT-sQ-dSY"/>
-                                            <outlet property="minus3Button" destination="qBv-ZC-uF4" id="d7L-VU-PFL"/>
-                                            <outlet property="plus1Button" destination="MD3-VK-7i5" id="5UG-Nj-An2"/>
-                                            <outlet property="plus2Button" destination="3wI-9C-7hk" id="RaV-x0-NKL"/>
-                                            <outlet property="plus3Button" destination="ESX-6G-O9a" id="zfK-C3-gXb"/>
-                                            <outlet property="stockNameLabel" destination="vBb-Um-trW" id="QZa-hb-Bus"/>
+                                            <outlet property="amountLabel" destination="29B-Mo-V40" id="PVk-YL-CCz"/>
+                                            <outlet property="detailsPanel" destination="Lk1-M3-usF" id="Xu8-Sg-O1l"/>
+                                            <outlet property="detailsPanelHeight" destination="ck2-HW-nbT" id="cpf-5c-Fsf"/>
+                                            <outlet property="minus1Button" destination="bTR-TX-l7T" id="gwV-Hm-9Et"/>
+                                            <outlet property="minus2Button" destination="YHn-kY-4Fk" id="K2O-Uu-vp5"/>
+                                            <outlet property="minus3Button" destination="v4A-eE-0w0" id="W2M-gY-dBB"/>
+                                            <outlet property="plus1Button" destination="StW-zv-wlr" id="6P8-yr-ucV"/>
+                                            <outlet property="plus2Button" destination="eio-UT-Vfv" id="25A-0h-3V0"/>
+                                            <outlet property="plus3Button" destination="dbg-B0-5qM" id="IZX-eh-ThU"/>
+                                            <outlet property="stockNameLabel" destination="Og7-Ei-91k" id="sS8-xj-M5t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="534-vu-FGu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="WnX-8g-lni">
                                 <rect key="frame" x="774" y="20" width="250" height="728"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stockCell" rowHeight="150" id="71c-AR-sLN" customClass="JYJStockCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stockCell" rowHeight="150" id="NfS-17-aca" customClass="JYJStockCell">
                                         <rect key="frame" x="0.0" y="55" width="250" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="71c-AR-sLN" id="VvE-Lm-tqc">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NfS-17-aca" id="QUg-tA-jIt">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-ia-z4a">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61D-gk-rYI">
                                                     <rect key="frame" x="20" y="20" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC7-zr-w1s">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB1-rC-ofn">
                                                     <rect key="frame" x="188" y="20" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXm-IT-zUi" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="61" width="30" height="30"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XH-oi-9Hw">
+                                                    <rect key="frame" x="20" y="55" width="210" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-H3-eki" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jab-Rm-Mcq" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="61" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wc-6e-5Ia" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="72" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-1">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uej-m9-eit" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="110" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPx-tb-VJB" customClass="UIButtonWithIndexPath">
-                                                    <rect key="frame" x="148" y="99" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="-3">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kv4-8T-ZAP" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="b87-rW-yI3"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-sj-uZc" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="gQb-Yu-NT4"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI9-0j-8mT" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="0.0" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Buy 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="02y-va-j7s"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyb-FC-ZX2" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="0.0" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="mTN-7B-ZaG"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH5-fI-9vP" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="83" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="7v6-xd-ZEk"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuE-PV-7ca" customClass="UIButtonWithIndexPath">
+                                                            <rect key="frame" x="165" y="45" width="45" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sell 3">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buyOrSell:" destination="zb6-Pi-7Ot" eventType="touchUpInside" id="9tH-ic-zfJ"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="PmK-gh-fz7"/>
+                                                        <constraint firstAttribute="width" constant="210" id="spm-Qy-XTO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QC7-zr-w1s" firstAttribute="top" secondItem="VvE-Lm-tqc" secondAttribute="top" constant="20" id="5xq-YD-sVH"/>
-                                                <constraint firstItem="jab-Rm-Mcq" firstAttribute="leading" secondItem="hH5-H3-eki" secondAttribute="trailing" constant="8" id="Hyk-ro-9nI"/>
-                                                <constraint firstAttribute="bottom" secondItem="uej-m9-eit" secondAttribute="bottom" constant="20" id="J6h-ou-38O"/>
-                                                <constraint firstItem="VPx-tb-VJB" firstAttribute="centerY" secondItem="0Wc-6e-5Ia" secondAttribute="centerY" id="Jrx-VD-XZD"/>
-                                                <constraint firstItem="jab-Rm-Mcq" firstAttribute="centerY" secondItem="hH5-H3-eki" secondAttribute="centerY" id="M58-yF-Gv3"/>
-                                                <constraint firstAttribute="trailing" secondItem="jab-Rm-Mcq" secondAttribute="trailing" constant="72" id="c0a-oV-VhT"/>
-                                                <constraint firstAttribute="trailing" secondItem="VPx-tb-VJB" secondAttribute="trailing" constant="72" id="dC8-nw-f7a"/>
-                                                <constraint firstItem="0Wc-6e-5Ia" firstAttribute="leading" secondItem="VvE-Lm-tqc" secondAttribute="leading" constant="72" id="dW8-5B-igU"/>
-                                                <constraint firstItem="AXm-IT-zUi" firstAttribute="leading" secondItem="VvE-Lm-tqc" secondAttribute="leading" constant="72" id="evg-GD-hAx"/>
-                                                <constraint firstAttribute="trailing" secondItem="QC7-zr-w1s" secondAttribute="trailing" constant="20" id="fys-fW-ETg"/>
-                                                <constraint firstItem="qDl-ia-z4a" firstAttribute="leading" secondItem="VvE-Lm-tqc" secondAttribute="leading" constant="20" id="gxY-Nd-UZm"/>
-                                                <constraint firstItem="jab-Rm-Mcq" firstAttribute="centerY" secondItem="AXm-IT-zUi" secondAttribute="centerY" id="kK9-Er-8Es"/>
-                                                <constraint firstItem="uej-m9-eit" firstAttribute="leading" secondItem="0Wc-6e-5Ia" secondAttribute="trailing" constant="8" id="nEZ-Px-FlH"/>
-                                                <constraint firstItem="hH5-H3-eki" firstAttribute="top" secondItem="VvE-Lm-tqc" secondAttribute="top" constant="61" id="urf-fx-zV8"/>
-                                                <constraint firstItem="qDl-ia-z4a" firstAttribute="top" secondItem="VvE-Lm-tqc" secondAttribute="top" constant="20" id="vd1-PW-CNi"/>
-                                                <constraint firstItem="hH5-H3-eki" firstAttribute="leading" secondItem="AXm-IT-zUi" secondAttribute="trailing" constant="8" id="xl0-SG-v0J"/>
-                                                <constraint firstItem="VPx-tb-VJB" firstAttribute="centerY" secondItem="uej-m9-eit" secondAttribute="centerY" id="yGV-Gd-kPp"/>
+                                                <constraint firstAttribute="trailing" secondItem="iB1-rC-ofn" secondAttribute="trailing" constant="20" id="1m5-GL-shG"/>
+                                                <constraint firstItem="61D-gk-rYI" firstAttribute="top" secondItem="QUg-tA-jIt" secondAttribute="top" constant="20" id="Hig-1c-uRJ"/>
+                                                <constraint firstItem="61D-gk-rYI" firstAttribute="leading" secondItem="QUg-tA-jIt" secondAttribute="leading" constant="20" id="MtG-SK-YW8"/>
+                                                <constraint firstItem="2XH-oi-9Hw" firstAttribute="top" secondItem="QUg-tA-jIt" secondAttribute="top" constant="55" id="Vw7-SJ-81c"/>
+                                                <constraint firstItem="iB1-rC-ofn" firstAttribute="top" secondItem="QUg-tA-jIt" secondAttribute="top" constant="20" id="aae-gc-DEx"/>
+                                                <constraint firstAttribute="centerX" secondItem="2XH-oi-9Hw" secondAttribute="centerX" id="o7V-0k-b9R"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="QC7-zr-w1s" id="X9j-3k-uJO"/>
-                                            <outlet property="minus1Button" destination="0Wc-6e-5Ia" id="Rd5-JC-5mY"/>
-                                            <outlet property="minus2Button" destination="uej-m9-eit" id="X9H-DU-p6C"/>
-                                            <outlet property="minus3Button" destination="VPx-tb-VJB" id="q5K-c9-ZBd"/>
-                                            <outlet property="plus1Button" destination="AXm-IT-zUi" id="R8x-iV-D4q"/>
-                                            <outlet property="plus2Button" destination="hH5-H3-eki" id="0n2-Ao-7lE"/>
-                                            <outlet property="plus3Button" destination="jab-Rm-Mcq" id="1tm-CJ-z9d"/>
-                                            <outlet property="stockNameLabel" destination="qDl-ia-z4a" id="TWR-6o-XQB"/>
+                                            <outlet property="amountLabel" destination="iB1-rC-ofn" id="Yi1-3d-4UW"/>
+                                            <outlet property="detailsPanel" destination="2XH-oi-9Hw" id="zkI-xr-asC"/>
+                                            <outlet property="detailsPanelHeight" destination="PmK-gh-fz7" id="ptF-zd-T5j"/>
+                                            <outlet property="minus1Button" destination="cyb-FC-ZX2" id="2SQ-5h-26p"/>
+                                            <outlet property="minus2Button" destination="ZH5-fI-9vP" id="Xe9-mz-Bl6"/>
+                                            <outlet property="minus3Button" destination="TuE-PV-7ca" id="cet-2e-YYl"/>
+                                            <outlet property="plus1Button" destination="kv4-8T-ZAP" id="OAB-5K-EjX"/>
+                                            <outlet property="plus2Button" destination="lFO-sj-uZc" id="CNa-7E-txo"/>
+                                            <outlet property="plus3Button" destination="tI9-0j-8mT" id="qgm-Qm-aif"/>
+                                            <outlet property="stockNameLabel" destination="61D-gk-rYI" id="Q00-zv-hyE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -427,9 +507,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outletCollection property="tableViews" destination="ux4-Vf-9gT" id="dEW-pd-TWz"/>
-                        <outletCollection property="tableViews" destination="3vH-Ay-21z" id="ogJ-GP-r0a"/>
-                        <outletCollection property="tableViews" destination="tbo-AY-S8M" id="AJA-6p-O8C"/>
-                        <outletCollection property="tableViews" destination="534-vu-FGu" id="aTJ-7D-isP"/>
+                        <outletCollection property="tableViews" destination="MYl-Bf-qrh" id="VKn-eg-NjQ"/>
+                        <outletCollection property="tableViews" destination="A2k-Je-pBo" id="KHF-1P-OHA"/>
+                        <outletCollection property="tableViews" destination="WnX-8g-lni" id="MIJ-U6-fhn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNs-FO-w8u" userLabel="First Responder" sceneMemberID="firstResponder"/>

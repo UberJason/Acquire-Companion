@@ -36,7 +36,7 @@
     NSInteger currentShares = [self.sharesOfStock[hotelName] integerValue];
     currentShares += shares;
     
-    if(currentShares < MAX_SHARES)
+    if(currentShares <= MAX_SHARES)
         self.sharesOfStock[hotelName] = @(currentShares);
 }
 

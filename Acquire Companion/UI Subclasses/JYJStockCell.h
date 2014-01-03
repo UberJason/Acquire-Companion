@@ -21,4 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIButtonWithIndexPath *minus2Button;
 @property (weak, nonatomic) IBOutlet UIButtonWithIndexPath *minus3Button;
 
+@property (weak, nonatomic) IBOutlet UIView *detailsPanel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *detailsPanelHeight;
+
+@property (nonatomic) BOOL showingDetails;
+
 @end

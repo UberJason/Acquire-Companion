@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96A3E98B18764C66007EE432 /* UIColor+LightAndDark.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3E98A18764C66007EE432 /* UIColor+LightAndDark.m */; };
 		96C61C8018748AD300E6CF99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C7F18748AD300E6CF99 /* Foundation.framework */; };
 		96C61C8218748AD300E6CF99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C8118748AD300E6CF99 /* CoreGraphics.framework */; };
 		96C61C8418748AD300E6CF99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C8318748AD300E6CF99 /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96A3E98918764C66007EE432 /* UIColor+LightAndDark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+LightAndDark.h"; path = "UI Subclasses/UIColor+LightAndDark.h"; sourceTree = "<group>"; };
+		96A3E98A18764C66007EE432 /* UIColor+LightAndDark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+LightAndDark.m"; path = "UI Subclasses/UIColor+LightAndDark.m"; sourceTree = "<group>"; };
 		96C61C7C18748AD300E6CF99 /* Acquire Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acquire Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C61C7F18748AD300E6CF99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96C61C8118748AD300E6CF99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,6 +195,8 @@
 				96C61CDA1874BD3600E6CF99 /* UIButtonWithIndexPath.m */,
 				96C61CD51874BC8B00E6CF99 /* JYJStockCell.h */,
 				96C61CD61874BC8B00E6CF99 /* JYJStockCell.m */,
+				96A3E98918764C66007EE432 /* UIColor+LightAndDark.h */,
+				96A3E98A18764C66007EE432 /* UIColor+LightAndDark.m */,
 			);
 			name = "UI Subclasses";
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				96C61CD11874988C00E6CF99 /* UIColor+FlatUI.m in Sources */,
 				96C61CDB1874BD3600E6CF99 /* UIButtonWithIndexPath.m in Sources */,
 				96C61C8C18748AD300E6CF99 /* main.m in Sources */,
+				96A3E98B18764C66007EE432 /* UIColor+LightAndDark.m in Sources */,
 				96C61CC5187495A900E6CF99 /* JYJHotel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

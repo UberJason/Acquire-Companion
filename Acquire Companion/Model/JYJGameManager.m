@@ -19,8 +19,8 @@
 -(NSDictionary *)hotels {
     if(!_hotels) {
         _hotels = @{
-                    TOWER : [[JYJHotel alloc] initWithName:TOWER hotelClass:HotelClassSmall size:0 color:[UIColor yellowColor] active:NO sharesRemaining:MAX_SHARES],
-                    LUXOR : [[JYJHotel alloc] initWithName:LUXOR hotelClass:HotelClassSmall size:0 color:[UIColor pumpkinFlatColor] active:NO sharesRemaining:MAX_SHARES],
+                    TOWER : [[JYJHotel alloc] initWithName:TOWER hotelClass:HotelClassSmall size:0 color:[UIColor colorWithRed:255 green:221 blue:0 alpha:1.0] active:NO sharesRemaining:MAX_SHARES],
+                    LUXOR : [[JYJHotel alloc] initWithName:LUXOR hotelClass:HotelClassSmall size:0 color:[UIColor redColor] active:NO sharesRemaining:MAX_SHARES],
                     AMERICAN : [[JYJHotel alloc] initWithName:AMERICAN hotelClass:HotelClassMedium size:0 color:[UIColor blueColor] active:NO sharesRemaining:MAX_SHARES],
                     WORLDWIDE : [[JYJHotel alloc] initWithName:WORLDWIDE hotelClass:HotelClassMedium size:0 color:[UIColor brownColor] active:NO sharesRemaining:MAX_SHARES],
                     FESTIVAL : [[JYJHotel alloc] initWithName:FESTIVAL hotelClass:HotelClassMedium size:0 color:[UIColor nephritisFlatColor] active:NO sharesRemaining:MAX_SHARES],
@@ -54,7 +54,7 @@
 -(void)removeStock:(NSString *)hotelName fromPlayer:(JYJPlayer *)player numberOfShares:(NSInteger)numberOfShares {
     JYJHotel *hotel = self.hotels[hotelName];
     if(hotel.sharesRemaining + numberOfShares <= MAX_SHARES) {
-        [player buyStock:hotelName numberOfShares:numberOfShares];
+        [player sellStock:hotelName numberOfShares:numberOfShares];
         hotel.sharesRemaining += numberOfShares;
     }
 }

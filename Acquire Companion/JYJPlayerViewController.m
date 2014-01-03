@@ -41,13 +41,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    
     for(UITableView *tableView in self.tableViews) {
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.backgroundColor = [UIColor lightGrayColor];
+        tableView.backgroundColor = [UIColor whiteColor];
         tableView.separatorColor = [UIColor blackColor];
+
     }
 }
 

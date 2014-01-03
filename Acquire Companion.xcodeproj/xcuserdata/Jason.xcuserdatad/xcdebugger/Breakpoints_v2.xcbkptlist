@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Acquire Companion/JYJPlayerViewController.m"
-            timestampString = "410409214.67126"
+            timestampString = "410409976.332074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-buyOrSell:"
             landmarkType = "5">
          </BreakpointContent>

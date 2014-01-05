@@ -12,11 +12,15 @@
 #import "JYJPlayer.h"
 #import "JYJStockCell.h"
 #import "UIColor+LightAndDark.h"
-
-@interface JYJPlayerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+#import "PageIndex.h"
+@interface JYJPlayerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, PageIndex>
 
 @property (strong, nonatomic) JYJGameManager *model;
 @property (strong, nonatomic) IBOutletCollection(UITableView) NSArray *tableViews;
 @property (strong, nonatomic) NSMutableArray *hotelShowingDetails;
 
+@property (nonatomic) NSInteger pageIndex;
+
+-(NSInteger)pageIndex;
+-(void)setPageIndex:(NSInteger)pageIndex;
 @end

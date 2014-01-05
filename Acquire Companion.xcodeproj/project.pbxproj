@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965F9B071879CEE500BE42D3 /* JYJHotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965F9B061879CEE500BE42D3 /* JYJHotelViewController.m */; };
+		965F9B0A1879CFBB00BE42D3 /* JYJPageManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965F9B091879CFBB00BE42D3 /* JYJPageManagerController.m */; };
 		96A3E98B18764C66007EE432 /* UIColor+LightAndDark.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3E98A18764C66007EE432 /* UIColor+LightAndDark.m */; };
 		96C61C8018748AD300E6CF99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C7F18748AD300E6CF99 /* Foundation.framework */; };
 		96C61C8218748AD300E6CF99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C8118748AD300E6CF99 /* CoreGraphics.framework */; };
@@ -43,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		965F9B051879CEE500BE42D3 /* JYJHotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJHotelViewController.h; path = Controllers/JYJHotelViewController.h; sourceTree = "<group>"; };
+		965F9B061879CEE500BE42D3 /* JYJHotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJHotelViewController.m; path = Controllers/JYJHotelViewController.m; sourceTree = "<group>"; };
+		965F9B081879CFBB00BE42D3 /* JYJPageManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJPageManagerController.h; path = Controllers/JYJPageManagerController.h; sourceTree = "<group>"; };
+		965F9B091879CFBB00BE42D3 /* JYJPageManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJPageManagerController.m; path = Controllers/JYJPageManagerController.m; sourceTree = "<group>"; };
+		965F9B0B1879D38100BE42D3 /* PageIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageIndex.h; path = Controllers/PageIndex.h; sourceTree = "<group>"; };
 		96A3E98918764C66007EE432 /* UIColor+LightAndDark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+LightAndDark.h"; path = "UI Subclasses/UIColor+LightAndDark.h"; sourceTree = "<group>"; };
 		96A3E98A18764C66007EE432 /* UIColor+LightAndDark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+LightAndDark.m"; path = "UI Subclasses/UIColor+LightAndDark.m"; sourceTree = "<group>"; };
 		96C61C7C18748AD300E6CF99 /* Acquire Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acquire Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,12 +79,12 @@
 		96C61CCA1874988C00E6CF99 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		96C61CCB1874988C00E6CF99 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
 		96C61CCC1874988C00E6CF99 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
-		96C61CD21874B8AF00E6CF99 /* JYJPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJPlayerViewController.h; sourceTree = "<group>"; };
-		96C61CD31874B8AF00E6CF99 /* JYJPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJPlayerViewController.m; sourceTree = "<group>"; };
+		96C61CD21874B8AF00E6CF99 /* JYJPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJPlayerViewController.h; path = Controllers/JYJPlayerViewController.h; sourceTree = "<group>"; };
+		96C61CD31874B8AF00E6CF99 /* JYJPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJPlayerViewController.m; path = Controllers/JYJPlayerViewController.m; sourceTree = "<group>"; };
 		96C61CD51874BC8B00E6CF99 /* JYJStockCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJStockCell.h; path = "UI Subclasses/JYJStockCell.h"; sourceTree = "<group>"; };
 		96C61CD61874BC8B00E6CF99 /* JYJStockCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJStockCell.m; path = "UI Subclasses/JYJStockCell.m"; sourceTree = "<group>"; };
-		96C61CD91874BD3600E6CF99 /* UIButtonWithIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonWithIndexPath.h; sourceTree = "<group>"; };
-		96C61CDA1874BD3600E6CF99 /* UIButtonWithIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonWithIndexPath.m; sourceTree = "<group>"; };
+		96C61CD91874BD3600E6CF99 /* UIButtonWithIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIButtonWithIndexPath.h; path = "UI Subclasses/UIButtonWithIndexPath.h"; sourceTree = "<group>"; };
+		96C61CDA1874BD3600E6CF99 /* UIButtonWithIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIButtonWithIndexPath.m; path = "UI Subclasses/UIButtonWithIndexPath.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		965F9B041879CDA800BE42D3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				965F9B081879CFBB00BE42D3 /* JYJPageManagerController.h */,
+				965F9B091879CFBB00BE42D3 /* JYJPageManagerController.m */,
+				965F9B051879CEE500BE42D3 /* JYJHotelViewController.h */,
+				965F9B061879CEE500BE42D3 /* JYJHotelViewController.m */,
+				96C61CD21874B8AF00E6CF99 /* JYJPlayerViewController.h */,
+				96C61CD31874B8AF00E6CF99 /* JYJPlayerViewController.m */,
+				965F9B0B1879D38100BE42D3 /* PageIndex.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		96C61C7318748AD300E6CF99 = {
 			isa = PBXGroup;
 			children = (
@@ -137,14 +158,10 @@
 		96C61C8518748AD300E6CF99 /* Acquire Companion */ = {
 			isa = PBXGroup;
 			children = (
-				96C61CBC18748E5000E6CF99 /* Model */,
-				96C61CD81874BC9200E6CF99 /* UI Subclasses */,
-				96C61CD21874B8AF00E6CF99 /* JYJPlayerViewController.h */,
-				96C61CD31874B8AF00E6CF99 /* JYJPlayerViewController.m */,
 				96C61CB718748BC600E6CF99 /* Main.storyboard */,
-				96C61C8E18748AD300E6CF99 /* JYJAppDelegate.h */,
-				96C61C8F18748AD300E6CF99 /* JYJAppDelegate.m */,
-				96C61C9718748AD300E6CF99 /* Images.xcassets */,
+				96C61CBC18748E5000E6CF99 /* Model */,
+				965F9B041879CDA800BE42D3 /* Controllers */,
+				96C61CD81874BC9200E6CF99 /* UI Subclasses */,
 				96C61C8618748AD300E6CF99 /* Supporting Files */,
 			);
 			path = "Acquire Companion";
@@ -153,6 +170,9 @@
 		96C61C8618748AD300E6CF99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96C61C9718748AD300E6CF99 /* Images.xcassets */,
+				96C61C8E18748AD300E6CF99 /* JYJAppDelegate.h */,
+				96C61C8F18748AD300E6CF99 /* JYJAppDelegate.m */,
 				96C61CBD1874902600E6CF99 /* JYJAcquireConstants.h */,
 				96C61C8718748AD300E6CF99 /* Acquire Companion-Info.plist */,
 				96C61C8818748AD300E6CF99 /* InfoPlist.strings */,
@@ -311,8 +331,10 @@
 				96C61C9018748AD300E6CF99 /* JYJAppDelegate.m in Sources */,
 				96C61CD41874B8AF00E6CF99 /* JYJPlayerViewController.m in Sources */,
 				96C61CD11874988C00E6CF99 /* UIColor+FlatUI.m in Sources */,
+				965F9B0A1879CFBB00BE42D3 /* JYJPageManagerController.m in Sources */,
 				96C61CDB1874BD3600E6CF99 /* UIButtonWithIndexPath.m in Sources */,
 				96C61C8C18748AD300E6CF99 /* main.m in Sources */,
+				965F9B071879CEE500BE42D3 /* JYJHotelViewController.m in Sources */,
 				96A3E98B18764C66007EE432 /* UIColor+LightAndDark.m in Sources */,
 				96C61CC5187495A900E6CF99 /* JYJHotel.m in Sources */,
 			);

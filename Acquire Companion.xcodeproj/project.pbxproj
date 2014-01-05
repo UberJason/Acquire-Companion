@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		965F9B071879CEE500BE42D3 /* JYJHotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965F9B061879CEE500BE42D3 /* JYJHotelViewController.m */; };
 		965F9B0A1879CFBB00BE42D3 /* JYJPageManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965F9B091879CFBB00BE42D3 /* JYJPageManagerController.m */; };
+		965F9B0D1879E06D00BE42D3 /* HotelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 965F9B0C1879E06D00BE42D3 /* HotelView.xib */; };
+		965F9B101879E21300BE42D3 /* HotelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965F9B0F1879E21300BE42D3 /* HotelView.m */; };
 		96A3E98B18764C66007EE432 /* UIColor+LightAndDark.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3E98A18764C66007EE432 /* UIColor+LightAndDark.m */; };
 		96C61C8018748AD300E6CF99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C7F18748AD300E6CF99 /* Foundation.framework */; };
 		96C61C8218748AD300E6CF99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C61C8118748AD300E6CF99 /* CoreGraphics.framework */; };
@@ -50,6 +52,9 @@
 		965F9B081879CFBB00BE42D3 /* JYJPageManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYJPageManagerController.h; path = Controllers/JYJPageManagerController.h; sourceTree = "<group>"; };
 		965F9B091879CFBB00BE42D3 /* JYJPageManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYJPageManagerController.m; path = Controllers/JYJPageManagerController.m; sourceTree = "<group>"; };
 		965F9B0B1879D38100BE42D3 /* PageIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageIndex.h; path = Controllers/PageIndex.h; sourceTree = "<group>"; };
+		965F9B0C1879E06D00BE42D3 /* HotelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HotelView.xib; path = Views/HotelView.xib; sourceTree = "<group>"; };
+		965F9B0E1879E21300BE42D3 /* HotelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelView.h; path = Views/HotelView.h; sourceTree = "<group>"; };
+		965F9B0F1879E21300BE42D3 /* HotelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelView.m; path = Views/HotelView.m; sourceTree = "<group>"; };
 		96A3E98918764C66007EE432 /* UIColor+LightAndDark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+LightAndDark.h"; path = "UI Subclasses/UIColor+LightAndDark.h"; sourceTree = "<group>"; };
 		96A3E98A18764C66007EE432 /* UIColor+LightAndDark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+LightAndDark.m"; path = "UI Subclasses/UIColor+LightAndDark.m"; sourceTree = "<group>"; };
 		96C61C7C18748AD300E6CF99 /* Acquire Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acquire Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +130,16 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		965F9B111879E21800BE42D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				965F9B0C1879E06D00BE42D3 /* HotelView.xib */,
+				965F9B0E1879E21300BE42D3 /* HotelView.h */,
+				965F9B0F1879E21300BE42D3 /* HotelView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		96C61C7318748AD300E6CF99 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +176,7 @@
 				96C61CB718748BC600E6CF99 /* Main.storyboard */,
 				96C61CBC18748E5000E6CF99 /* Model */,
 				965F9B041879CDA800BE42D3 /* Controllers */,
+				965F9B111879E21800BE42D3 /* Views */,
 				96C61CD81874BC9200E6CF99 /* UI Subclasses */,
 				96C61C8618748AD300E6CF99 /* Supporting Files */,
 			);
@@ -306,6 +322,7 @@
 				96C61CCD1874988C00E6CF99 /* .gitignore in Resources */,
 				96C61CD01874988C00E6CF99 /* README.md in Resources */,
 				96C61CB818748BC600E6CF99 /* Main.storyboard in Resources */,
+				965F9B0D1879E06D00BE42D3 /* HotelView.xib in Resources */,
 				96C61C9818748AD300E6CF99 /* Images.xcassets in Resources */,
 				96C61C8A18748AD300E6CF99 /* InfoPlist.strings in Resources */,
 			);
@@ -333,6 +350,7 @@
 				96C61CD11874988C00E6CF99 /* UIColor+FlatUI.m in Sources */,
 				965F9B0A1879CFBB00BE42D3 /* JYJPageManagerController.m in Sources */,
 				96C61CDB1874BD3600E6CF99 /* UIButtonWithIndexPath.m in Sources */,
+				965F9B101879E21300BE42D3 /* HotelView.m in Sources */,
 				96C61C8C18748AD300E6CF99 /* main.m in Sources */,
 				965F9B071879CEE500BE42D3 /* JYJHotelViewController.m in Sources */,
 				96A3E98B18764C66007EE432 /* UIColor+LightAndDark.m in Sources */,

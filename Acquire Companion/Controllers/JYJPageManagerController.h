@@ -12,6 +12,9 @@
 
 @interface JYJPageManagerController : UIPageViewController<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
+@property (strong, nonatomic) JYJGameManager *model;
+
 @property (strong, nonatomic) NSArray *viewControllerIdentifiers;
+@property (strong, nonatomic) NSMutableArray *myViewControllers;
 
 @end

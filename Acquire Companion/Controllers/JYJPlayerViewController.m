@@ -15,13 +15,11 @@
 @implementation JYJPlayerViewController
 
 -(JYJGameManager *)model {
-    if(!_model)
-        _model = [[JYJGameManager alloc] initWithPlayers:[@[
-                                                            [[JYJPlayer alloc] initWithName:@"Jason"],
-                                                            [[JYJPlayer alloc] initWithName:@"Mary Anne"],
-                                                            [[JYJPlayer alloc] initWithName:@"Dad"],
-                                                            [[JYJPlayer alloc] initWithName:@"John"]
-                                                            ] mutableCopy]];
+    if(!_model) {
+        JYJAppDelegate *delegate = (JYJAppDelegate *)[[UIApplication sharedApplication] delegate];
+        _model = delegate.model;
+    }
+    
     return _model;
 }
 
@@ -111,13 +109,30 @@
     [self setButtonPropertiesForButton:cell.minus1Button withColor:[hotel.color darkerColor] tableView:tableView indexPath:indexPath];
     [self setButtonPropertiesForButton:cell.minus2Button withColor:[hotel.color darkerColor] tableView:tableView indexPath:indexPath];
     [self setButtonPropertiesForButton:cell.minus3Button withColor:[hotel.color darkerColor] tableView:tableView indexPath:indexPath];
+
+    
+    [self enableOrDisableButton:cell.plus1Button forChange:1 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.plus2Button forChange:2 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.plus3Button forChange:3 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.minus1Button forChange:-1 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.minus2Button forChange:-2 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.minus3Button forChange:-3 player:player hotel:hotel];
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger indexOfPlayerTableView = [self.tableViews indexOfObject:tableView];
+    JYJPlayer *player = self.model.players[indexOfPlayerTableView];
+    JYJHotel *hotel = self.model.hotels[ [JYJGameManager hotelNames][indexPath.row] ];
     JYJStockCell *cell = (JYJStockCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [self enableOrDisableButton:cell.plus1Button forChange:1 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.plus2Button forChange:2 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.plus3Button forChange:3 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.minus1Button forChange:-1 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.minus2Button forChange:-2 player:player hotel:hotel];
+    [self enableOrDisableButton:cell.minus3Button forChange:-3 player:player hotel:hotel];
     
     if([self.hotelShowingDetails[indexOfPlayerTableView] integerValue] == indexPath.row) {
         self.hotelShowingDetails[indexOfPlayerTableView] = @(-1);
@@ -151,6 +166,17 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
+-(void)enableOrDisableButton:(UIButton *)button forChange:(NSInteger)change player:(JYJPlayer *)player hotel:(JYJHotel *)hotel {
+    if([player.sharesOfStock[hotel.name] integerValue] + change < 0 || change > hotel.sharesRemaining) {
+        button.enabled = NO;
+        button.alpha = 0.5;
+    }
+    else {
+        button.enabled = YES;
+        button.alpha = 1.0;
+    }
+}
+
 -(void)setButtonPropertiesForButton:(UIButtonWithIndexPath *)button withColor:(UIColor *)color tableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     [button setTitleColor:color forState:UIControlStateNormal];
     button.layer.borderColor = [color CGColor];
@@ -166,11 +192,6 @@
     JYJStockCell *cell = (JYJStockCell *)[tableView cellForRowAtIndexPath:sender.indexPath];
     JYJPlayer *player = self.model.players[sender.indexOfTableView];
     JYJHotel *hotel = self.model.hotels[ [JYJGameManager hotelNames][sender.indexPath.row] ];
-    
-//    NSLog(@"Player: %@", player.name);
-//    NSLog(@"Hotel: %@", hotel.name);
-//    NSLog(@"Player stock before change: %d", [player.sharesOfStock[hotel.name] integerValue]);
-//    NSLog(@"Hotel stock remaining before change: %d", hotel.sharesRemaining);
     
     if(sender == cell.plus1Button) {
         NSLog(@"+1");
@@ -197,10 +218,16 @@
         [self.model removeStock:hotel.name fromPlayer:player numberOfShares:3];
     }
 
-//    NSLog(@"Player stock after change: %d", [player.sharesOfStock[hotel.name] integerValue]); 
-//    NSLog(@"Hotel stock remaining after change: %d", hotel.sharesRemaining);
-
-    [tableView reloadData];
+    NSLog(@"Current majority owners: ");
+    for(JYJPlayer *player in hotel.currentMajorityOwners)
+        NSLog(@"%@", player.name);
+    
+    NSLog(@"Current minority owners: ");
+    for(JYJPlayer *player in hotel.currentMinorityOwners)
+        NSLog(@"%@", player.name);
+    
+    for(UITableView *table in self.tableViews)
+        [table reloadData];
 }
 
 

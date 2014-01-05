@@ -10,6 +10,17 @@
 
 @implementation JYJAppDelegate
 
+-(JYJGameManager *)model {
+    if(!_model)
+        _model = [[JYJGameManager alloc] initWithPlayers:[@[
+                                                            [[JYJPlayer alloc] initWithName:@"Jason"],
+                                                            [[JYJPlayer alloc] initWithName:@"Mary Anne"],
+                                                            [[JYJPlayer alloc] initWithName:@"Dad"],
+                                                            [[JYJPlayer alloc] initWithName:@"John"]
+                                                            ] mutableCopy]];
+    return _model;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -44,6 +55,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(JYJGameManager *)sharedModel {
+    return self.model;
 }
 
 @end

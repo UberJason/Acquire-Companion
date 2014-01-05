@@ -23,6 +23,9 @@
 -(void)removeStock:(NSString *)hotelName fromPlayer:(JYJPlayer *)player numberOfShares:(NSInteger)numberOfShares;
 -(NSArray *)majorityOwnersForHotel:(JYJHotel *)hotel;
 -(NSArray *)minorityOwnersForHotel:(JYJHotel *)hotel;
+-(NSArray *)majorityOwnerNamesForHotel:(JYJHotel *)hotel;
+-(NSArray *)minorityOwnerNamesForHotel:(JYJHotel *)hotel;
 -(void)destroyHotel:(JYJHotel *)hotel;
+-(void)createHotel:(JYJHotel *)hotel;
 
 @end

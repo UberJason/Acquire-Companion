@@ -14,10 +14,28 @@
 
 @implementation JYJPageManagerController
 
+-(JYJGameManager *)model {
+    if(!_model)
+        _model = [[JYJGameManager alloc] initWithPlayers:[@[
+                                                            [[JYJPlayer alloc] initWithName:@"Jason"],
+                                                            [[JYJPlayer alloc] initWithName:@"Mary Anne"],
+                                                            [[JYJPlayer alloc] initWithName:@"Dad"],
+                                                            [[JYJPlayer alloc] initWithName:@"John"]
+                                                            ] mutableCopy]];
+    return _model;
+}
+
 -(NSArray *)viewControllerIdentifiers {
     if(!_viewControllerIdentifiers)
-        _viewControllerIdentifiers = @[@"playerViewController", @"hotelViewController"];
+        _viewControllerIdentifiers = @[@"hotelViewController", @"playerViewController"];
     return _viewControllerIdentifiers;
+}
+
+-(NSMutableArray *)myViewControllers {
+    if(!_myViewControllers) {
+        _myViewControllers = [NSMutableArray new];
+    }
+    return _myViewControllers;
 }
 
 - (void)viewDidLoad
@@ -26,6 +44,10 @@
 	// Do any additional setup after loading the view.
     self.delegate = self;
     self.dataSource = self;
+    for(UIGestureRecognizer *recognizer in self.gestureRecognizers) {
+        recognizer.delaysTouchesBegan = NO;
+        recognizer.delaysTouchesEnded = NO;
+    }
     
     UIViewController<PageIndex> *controller = [self viewControllerAtIndex:0];
     
@@ -45,7 +67,7 @@
 
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     NSInteger index = [((id<PageIndex>)viewController) pageIndex];
-
+    
     if(index == NSNotFound)
         return nil;
     
@@ -68,10 +90,16 @@
     if((self.viewControllerIdentifiers.count == 0) || index >= self.viewControllerIdentifiers.count)
         return nil;
     
-    UIViewController<PageIndex> *controller = [self.storyboard instantiateViewControllerWithIdentifier:self.viewControllerIdentifiers[index]];
-    [controller setPageIndex:index];
+    if(self.myViewControllers.count > index && self.myViewControllers[index])
+        return self.myViewControllers[index];
+    else {
+        UIViewController<PageIndex> *controller = [self.storyboard instantiateViewControllerWithIdentifier:self.viewControllerIdentifiers[index]];
+        [controller setPageIndex:index];
+        [self.myViewControllers addObject:controller];
+        
+        return controller;
+    }
     
-    return controller;
 }
 
 @end

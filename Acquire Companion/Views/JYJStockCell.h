@@ -25,5 +25,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *detailsPanelHeight;
 
 @property (nonatomic) BOOL showingDetails;
+@property (nonatomic) NSInteger myTableViewIndex;
+@property (weak, nonatomic) id<JYJAcquireCompanionDelegate> delegate;
+
+@property (weak, nonatomic) UIView *mainView;
 
 @end

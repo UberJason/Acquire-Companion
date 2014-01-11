@@ -19,9 +19,8 @@
         NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
         UIView *mainView = subviewArray[0];
         
-        mainView.frame = self.bounds;
-        
         [self addSubview:mainView];
+        self.mainView = mainView;
         
     }
     return self;
@@ -32,6 +31,10 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+- (IBAction)buyOrSell:(UIButtonWithIndexPath *)sender {
+    NSLog(@"buy or sell clicked");
+    [self.delegate buyOrSell:sender];
 }
 
 @end

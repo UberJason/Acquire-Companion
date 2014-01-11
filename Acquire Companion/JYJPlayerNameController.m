@@ -7,6 +7,7 @@
 //
 
 #import "JYJPlayerNameController.h"
+#define iPAD_LANDSCAPE_KEYBOARD_HEIGHT 352
 
 @interface JYJPlayerNameController ()
 
@@ -39,10 +40,13 @@
     
     self.numberOfPlayersTextField.text = [NSString stringWithFormat:@"%d", self.numberOfPlayers];
     [self.numberOfPlayersTextField addGestureRecognizer:self.tap];
+    self.numberOfPlayersTextField.textColor = [UIColor emeraldFlatColor];
+    self.numberOfPlayersTextField.font = [UIFont boldSystemFontOfSize:17];
     [self.tableView layoutIfNeeded];
     
     self.tableViewHeight.constant = self.tableView.contentSize.height;
     
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -79,6 +83,9 @@
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
     NSLog(@"begin editing");
+    [UIView animateWithDuration:0.1 animations:^{
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y-80, self.view.frame.size.width, self.view.frame.size.height);
+    }];
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField {
@@ -87,6 +94,10 @@
         textField.text = @"";
     NSNumber *index = @(((UITextFieldWithIndexPath *)textField).indexPath.row);
     self.newPlayerList[index] = textField.text;
+    
+    [UIView animateWithDuration:0.1 animations:^{
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y+80, self.view.frame.size.width, self.view.frame.size.height);
+    }];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -95,6 +106,8 @@
 }
 
 - (IBAction)saveAndPlay {
+    
+    [self.view endEditing:YES];
     
     NSMutableArray *newPlayerList = [NSMutableArray new];
     
@@ -142,6 +155,9 @@
     }];
 }
 
+-(void)hideKeyboard {
+    [self.view endEditing:YES];
+}
 -(BOOL)disablesAutomaticKeyboardDismissal {
     return NO;
 }

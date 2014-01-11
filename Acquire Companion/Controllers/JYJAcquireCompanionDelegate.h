@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIButtonWithIndexPath.h"
 
 @protocol JYJAcquireCompanionDelegate <NSObject>
 
 @optional
 -(void)dismissPlayerListWithList:(NSArray *)newPlayerNames;
 -(void)dismissPickerWithValue:(NSInteger)value;
+-(void)buyOrSell:(UIButtonWithIndexPath *)button;
 
 @end

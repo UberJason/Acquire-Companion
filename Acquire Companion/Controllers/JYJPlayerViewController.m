@@ -8,6 +8,11 @@
 
 #import "JYJPlayerViewController.h"
 
+#define iPAD_TOTAL_LANDSCAPE_WIDTH 1024
+#define PLAYER_TABLE_VIEW_WIDTH 250
+#define PLAYER_TABLE_VIEW_HEIGHT 510
+#define SPACING_BETWEEN_TABLE_VIEWS 8
+
 @interface JYJPlayerViewController ()
 
 @end
@@ -21,6 +26,12 @@
     }
     
     return _model;
+}
+
+-(NSMutableArray *)tableViews {
+    if(!_tableViews)
+        _tableViews = [NSMutableArray new];
+    return _tableViews;
 }
 
 -(NSMutableArray *)hotelShowingDetails {
@@ -41,6 +52,8 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
+    [self setUpTableViews];
+    
     for(UITableView *tableView in self.tableViews) {
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -48,9 +61,86 @@
         tableView.separatorColor = [UIColor blackColor];
         tableView.backgroundColor = [UIColor lightGrayColor];
     }
-    
 }
 
+-(void)setUpTableViews {
+    NSInteger n = self.model.players.count;
+    CGFloat spacing = MAX((iPAD_TOTAL_LANDSCAPE_WIDTH - n*PLAYER_TABLE_VIEW_WIDTH - (n-1)*SPACING_BETWEEN_TABLE_VIEWS)/2, 20);
+    
+    for(NSInteger i = 0; i < self.model.players.count; i++) {
+        [self addTableViewAsFirst:(i == 0) asLast:(i == self.model.players.count-1) withSpacingFromSide:(CGFloat)spacing];
+    }
+}
+
+-(void)addTableViewAsFirst:(BOOL)isFirst asLast:(BOOL)isLast withSpacingFromSide:(CGFloat) spacing {
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, PLAYER_TABLE_VIEW_WIDTH, PLAYER_TABLE_VIEW_HEIGHT) style:UITableViewStyleGrouped];
+    tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+
+    [self.scrollView addSubview:tableView];
+    
+    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:tableView
+                                                                       attribute:NSLayoutAttributeWidth
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:nil
+                                                                       attribute:NSLayoutAttributeNotAnAttribute
+                                                                      multiplier:1.0
+                                                                        constant:PLAYER_TABLE_VIEW_WIDTH];
+    [tableView addConstraint:widthConstraint];
+
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:tableView
+                                                                       attribute:NSLayoutAttributeHeight
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:nil
+                                                                       attribute:NSLayoutAttributeNotAnAttribute
+                                                                      multiplier:1.0
+                                                                        constant:PLAYER_TABLE_VIEW_HEIGHT];
+    [tableView addConstraint:heightConstraint];
+
+    NSArray *verticalSpacing = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[tableView]-|"
+                                                                  options:0
+                                                                  metrics:nil
+                                                                    views:NSDictionaryOfVariableBindings(tableView)];
+    [self.scrollView addConstraints:verticalSpacing];
+    
+    UIView *lastView = [self.tableViews lastObject];
+    NSString *horizontalConstraintString = @"";
+    NSDictionary *keyDictionary;
+    if(isFirst) {
+        if(isLast) {
+            horizontalConstraintString = [NSString stringWithFormat:@"|-(%f)-[tableView]-(%f)-|", spacing, spacing];
+            keyDictionary = NSDictionaryOfVariableBindings(tableView);
+        }
+        else {
+            horizontalConstraintString = [NSString stringWithFormat:@"|-(%f)-[tableView]", spacing];
+            keyDictionary = NSDictionaryOfVariableBindings(tableView);
+        }
+        
+    }
+    else {
+        if(isLast) {
+            horizontalConstraintString = [NSString stringWithFormat:@"[lastView]-(%d)-[tableView]-(%f)-|", SPACING_BETWEEN_TABLE_VIEWS, spacing];
+            keyDictionary = NSDictionaryOfVariableBindings(lastView, tableView);
+        }
+        else {
+            horizontalConstraintString = [NSString stringWithFormat:@"[lastView]-(%d)-[tableView]", SPACING_BETWEEN_TABLE_VIEWS];
+            keyDictionary = NSDictionaryOfVariableBindings(lastView, tableView);
+        }
+        
+    }
+    
+    NSArray *horizontalLayoutConstraints = [NSLayoutConstraint constraintsWithVisualFormat:horizontalConstraintString
+                                                                       options: 0
+                                                                       metrics:nil
+                                                                         views:keyDictionary];
+
+    [self.scrollView addConstraints:horizontalLayoutConstraints];
+    
+    
+    [self.tableViews addObject:tableView];
+    
+}
 #pragma mark - tableview delegate/data source
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -86,6 +176,9 @@
     NSString *cellIdentifier = @"stockCell";
     
     JYJStockCell *cell = (JYJStockCell *)[currentTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(!cell) {
+        cell = [[JYJStockCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"stockCell"];
+    }
     cell.stockNameLabel.text = hotel.name;
     cell.amountLabel.text = [NSString stringWithFormat:@"%ld shares", (long)[player.sharesOfStock[hotel.name] integerValue]];
     
@@ -98,11 +191,13 @@
         cell.detailsPanelHeight.constant = [self detailsPanelHeight:NO];
     }
     
-    cell.backgroundColor = [hotel.color lighterColor];
+    cell.mainView.backgroundColor = [hotel.color lighterColor];
     cell.stockNameLabel.textColor = [hotel.color darkerColor];
     cell.stockNameLabel.font = [UIFont boldSystemFontOfSize:17.0];
     cell.amountLabel.textColor = [hotel.color darkerColor];
     cell.amountLabel.font = [UIFont boldSystemFontOfSize:17.0];
+    cell.myTableViewIndex = indexOfPlayerTableView;
+    cell.delegate = self;
     
     [self setButtonPropertiesForButton:cell.plus1Button withColor:[hotel.color darkerColor] tableView:tableView indexPath:indexPath];
     [self setButtonPropertiesForButton:cell.plus2Button withColor:[hotel.color darkerColor] tableView:tableView indexPath:indexPath];
@@ -162,8 +257,6 @@
         }];
     }
     
-
-    
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
@@ -188,7 +281,7 @@
     button.indexPath = indexPath;
 }
 
-- (IBAction)buyOrSell:(UIButtonWithIndexPath *)sender {
+- (void)buyOrSell:(UIButtonWithIndexPath *)sender {
     UITableView *tableView = self.tableViews[sender.indexOfTableView];
     JYJStockCell *cell = (JYJStockCell *)[tableView cellForRowAtIndexPath:sender.indexPath];
     JYJPlayer *player = self.model.players[sender.indexOfTableView];

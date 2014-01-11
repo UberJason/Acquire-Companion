@@ -40,12 +40,12 @@
     self.contentView.backgroundColor = [self.hotel.color lighterColor];
     
     if(self.hotel.active)
-        self.titleLabel.text = [NSString stringWithFormat:@"%@: $%d", self.hotel.name, [self.hotel currentStockPrice]];
+        self.titleLabel.text = [NSString stringWithFormat:@"%@: $%ld", self.hotel.name, (long)[self.hotel currentStockPrice]];
     else
         self.titleLabel.text = [NSString stringWithFormat:@"%@: INACTIVE", self.hotel.name];
     
-    self.sizeRightLabel.text = [NSString stringWithFormat:@"%d", self.hotel.size];
-    self.sharesRightLabel.text = [NSString stringWithFormat:@"%d", self.hotel.sharesRemaining];
+    self.sizeRightLabel.text = [NSString stringWithFormat:@"%ld", (long)self.hotel.size];
+    self.sharesRightLabel.text = [NSString stringWithFormat:@"%ld", (long)self.hotel.sharesRemaining];
     
     self.firstRightLabel.text = [[self.delegate.model majorityOwnerNamesForHotel:self.hotel] componentsJoinedByString:@", "];
     self.secondRightLabel.text = [[self.delegate.model minorityOwnerNamesForHotel:self.hotel] componentsJoinedByString:@", "];

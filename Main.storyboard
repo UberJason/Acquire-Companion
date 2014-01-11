@@ -514,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNs-FO-w8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="-993"/>
+            <point key="canvasLocation" x="1323" y="1136"/>
         </scene>
         <!--Page Manager Controller-->
         <scene sceneID="oE5-Z4-BaL">
@@ -525,6 +525,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hn-Wj-Kfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1302" y="-424"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="lZW-g3-eYU">
+            <objects>
+                <viewController id="tkl-JC-1rO" customClass="JYJPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a13-l5-oJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="dAi-Qv-a5N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tbx-qr-jWT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTc-t0-onW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="-783"/>
         </scene>
         <!--Hotel View Controller-->
         <scene sceneID="r28-0n-jFR">
@@ -598,6 +618,181 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiO-pf-xw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="23" y="80"/>
+        </scene>
+        <!--Player Name Controller-->
+        <scene sceneID="JGB-Qw-LKA">
+            <objects>
+                <viewController storyboardIdentifier="playerPopover" id="nMx-9b-Juc" customClass="JYJPlayerNameController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rve-Zn-OT4"/>
+                        <viewControllerLayoutGuide type="bottom" id="MZc-Yp-Blg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EGj-hT-Ada">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Acquire Companion!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-eb-mok">
+                                <rect key="frame" x="130" y="28" width="281" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many players?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s76-t7-0ZU">
+                                <rect key="frame" x="110" y="94" width="152" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Number of Players" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beE-mb-Z9P">
+                                <rect key="frame" x="306" y="90" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dvf-ZU-WfI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="X9Y-aA-cPa">
+                                <rect key="frame" x="110" y="123" width="320" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="4Wa-AB-OYa"/>
+                                    <constraint firstAttribute="width" constant="320" id="hjF-HY-wEh"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Tsc-Hq-00C" customClass="JYJPlayerNameCell">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tsc-Hq-00C" id="jgq-2p-sm4">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pES-mw-j7T">
+                                                    <rect key="frame" x="20" y="11" width="62" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Player 1's Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-SS-OqO" customClass="UITextFieldWithIndexPath">
+                                                    <rect key="frame" x="170" y="11" width="130" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="naM-SU-tIt"/>
+                                                        <constraint firstAttribute="height" constant="21" id="xb7-lC-r9b"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="pES-mw-j7T" secondAttribute="centerY" id="6Zt-n7-QFJ"/>
+                                                <constraint firstItem="pES-mw-j7T" firstAttribute="leading" secondItem="jgq-2p-sm4" secondAttribute="leading" constant="20" symbolic="YES" id="cAs-i2-yRw"/>
+                                                <constraint firstItem="1bn-SS-OqO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pES-mw-j7T" secondAttribute="trailing" constant="8" symbolic="YES" id="cqc-11-ABx"/>
+                                                <constraint firstAttribute="trailing" secondItem="1bn-SS-OqO" secondAttribute="trailing" constant="20" symbolic="YES" id="tid-34-enx"/>
+                                                <constraint firstAttribute="centerY" secondItem="1bn-SS-OqO" secondAttribute="centerY" id="zFU-hD-rdI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftLabel" destination="pES-mw-j7T" id="ArG-5I-Gbx"/>
+                                            <outlet property="textField" destination="1bn-SS-OqO" id="E0V-ot-Pk8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frq-OM-JZJ">
+                                <rect key="frame" x="213" y="423" width="114" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Save and Play!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveAndPlay" destination="nMx-9b-Juc" eventType="touchUpInside" id="6gU-76-IAv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X9Y-aA-cPa" firstAttribute="leading" secondItem="s76-t7-0ZU" secondAttribute="leading" id="4M9-cG-zh6"/>
+                            <constraint firstItem="beE-mb-Z9P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s76-t7-0ZU" secondAttribute="trailing" constant="8" symbolic="YES" id="FOY-dx-cts"/>
+                            <constraint firstAttribute="centerX" secondItem="Frq-OM-JZJ" secondAttribute="centerX" id="HBC-yj-9Z8"/>
+                            <constraint firstItem="X9Y-aA-cPa" firstAttribute="top" secondItem="s76-t7-0ZU" secondAttribute="bottom" constant="8" symbolic="YES" id="LV6-fo-7Zb"/>
+                            <constraint firstAttribute="centerX" secondItem="X9Y-aA-cPa" secondAttribute="centerX" id="Myk-IF-SGS"/>
+                            <constraint firstItem="s76-t7-0ZU" firstAttribute="top" secondItem="A7f-eb-mok" secondAttribute="bottom" constant="45" id="PzO-z7-DjA"/>
+                            <constraint firstItem="beE-mb-Z9P" firstAttribute="top" secondItem="A7f-eb-mok" secondAttribute="bottom" constant="41" id="QbV-JR-LnK"/>
+                            <constraint firstAttribute="centerX" secondItem="A7f-eb-mok" secondAttribute="centerX" id="ZdC-2R-yN7"/>
+                            <constraint firstItem="Frq-OM-JZJ" firstAttribute="top" secondItem="X9Y-aA-cPa" secondAttribute="bottom" id="cUd-py-5zB"/>
+                            <constraint firstItem="X9Y-aA-cPa" firstAttribute="trailing" secondItem="beE-mb-Z9P" secondAttribute="trailing" id="fhT-5l-s0l"/>
+                            <constraint firstItem="A7f-eb-mok" firstAttribute="top" secondItem="Rve-Zn-OT4" secondAttribute="bottom" constant="20" symbolic="YES" id="fo6-YV-M0z"/>
+                        </constraints>
+                    </view>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="numberOfPlayersTextField" destination="beE-mb-Z9P" id="XPO-Ni-ngt"/>
+                        <outlet property="tableView" destination="X9Y-aA-cPa" id="Rxe-RU-YV6"/>
+                        <outlet property="tableViewHeight" destination="4Wa-AB-OYa" id="ByU-Pf-Ek0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCt-tl-hIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="1006"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="5CY-Vv-A1C">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxO-pc-Zlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="pickerViewController" autoresizesArchivedViewToFullSize="NO" id="yqZ-RK-Ztj" customClass="JYJPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nyx-XB-ILA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ykS-2c-5Uf"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="ylY-Rl-rP2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="256"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYe-1o-5D7">
+                                <rect key="frame" x="0.0" y="44" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="9Mz-9W-pR9"/>
+                                    <constraint firstAttribute="width" constant="320" id="QCk-DX-hTy"/>
+                                </constraints>
+                            </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPm-iD-elq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1qA-ce-rgx"/>
+                                    <barButtonItem title="Done" id="l4S-5Z-A2M">
+                                        <connections>
+                                            <action selector="donePickingValues:" destination="yqZ-RK-Ztj" id="xbS-Ld-Au0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nYe-1o-5D7" firstAttribute="leading" secondItem="ylY-Rl-rP2" secondAttribute="leading" id="4pg-b3-E7s"/>
+                            <constraint firstItem="tPm-iD-elq" firstAttribute="top" secondItem="ylY-Rl-rP2" secondAttribute="top" id="PgL-et-0pG"/>
+                            <constraint firstItem="nYe-1o-5D7" firstAttribute="top" secondItem="tPm-iD-elq" secondAttribute="bottom" id="SCg-D5-5XE"/>
+                            <constraint firstAttribute="trailing" secondItem="tPm-iD-elq" secondAttribute="trailing" id="SIj-ST-qrh"/>
+                            <constraint firstItem="tPm-iD-elq" firstAttribute="leading" secondItem="ylY-Rl-rP2" secondAttribute="leading" id="dj5-Zr-T0g"/>
+                            <constraint firstAttribute="trailing" secondItem="nYe-1o-5D7" secondAttribute="trailing" id="gPz-g7-V31"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="256"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="pickerView" destination="nYe-1o-5D7" id="DSZ-sj-BTg"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="391" y="1725"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

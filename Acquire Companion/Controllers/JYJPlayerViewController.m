@@ -48,6 +48,7 @@
         tableView.separatorColor = [UIColor blackColor];
         tableView.backgroundColor = [UIColor lightGrayColor];
     }
+    
 }
 
 #pragma mark - tableview delegate/data source
@@ -86,7 +87,7 @@
     
     JYJStockCell *cell = (JYJStockCell *)[currentTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.stockNameLabel.text = hotel.name;
-    cell.amountLabel.text = [NSString stringWithFormat:@"%d shares", [player.sharesOfStock[hotel.name] integerValue]];
+    cell.amountLabel.text = [NSString stringWithFormat:@"%ld shares", (long)[player.sharesOfStock[hotel.name] integerValue]];
     
     if(cell.showingDetails) {
         cell.detailsPanel.alpha = 1.0;

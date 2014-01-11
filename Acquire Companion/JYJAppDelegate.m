@@ -26,10 +26,18 @@
     // Override point for customization after application launch.
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.backgroundColor = [UIColor lightGrayColor];
-    
+//    
+//    JYJPlayerNameController *playerPopover = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"playerPopover"];
+//    playerPopover.modalPresentationStyle = UIModalPresentationFormSheet;
+//    [self.window makeKeyAndVisible];
+//    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.window.rootViewController presentViewController:playerPopover animated:YES completion:nil];
+//    });
+
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

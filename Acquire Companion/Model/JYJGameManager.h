@@ -16,7 +16,6 @@
 @property (strong, nonatomic) NSDictionary *hotels;
 
 -(JYJGameManager *)initWithPlayers:(NSMutableArray *)players;
-
 +(NSArray *)hotelNames;
 
 -(void)addStock:(NSString *)hotelName toPlayer:(JYJPlayer *)player numberOfShares:(NSInteger)numberOfShares;

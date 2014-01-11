@@ -11,7 +11,7 @@
 #import "HotelView.h"
 #import "JYJGameManager.h"
 
-@interface JYJHotelViewController : UIViewController <PageIndex>
+@interface JYJHotelViewController : UIViewController <PageIndex, JYJAcquireCompanionDelegate>
 
 @property (strong, nonatomic) JYJGameManager *model;
 
@@ -33,5 +33,7 @@
 @property (nonatomic) NSInteger pageIndex;
 -(NSInteger)pageIndex;
 -(void)setPageIndex:(NSInteger)pageIndex;
+
+-(void)dismissPlayerListWithList:(NSArray *)newPlayerNames;
 
 @end

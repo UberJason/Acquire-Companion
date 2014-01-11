@@ -16,12 +16,13 @@
 
 -(JYJGameManager *)model {
     if(!_model)
-        _model = [[JYJGameManager alloc] initWithPlayers:[@[
-                                                            [[JYJPlayer alloc] initWithName:@"Jason"],
-                                                            [[JYJPlayer alloc] initWithName:@"Mary Anne"],
-                                                            [[JYJPlayer alloc] initWithName:@"Dad"],
-                                                            [[JYJPlayer alloc] initWithName:@"John"]
-                                                            ] mutableCopy]];
+//        _model = [[JYJGameManager alloc] initWithPlayers:[@[
+//                                                            [[JYJPlayer alloc] initWithName:@"Jason"],
+//                                                            [[JYJPlayer alloc] initWithName:@"Mary Anne"],
+//                                                            [[JYJPlayer alloc] initWithName:@"Dad"],
+//                                                            [[JYJPlayer alloc] initWithName:@"John"]
+//                                                            ] mutableCopy]];
+        _model = [[JYJGameManager alloc] initWithPlayers:nil];
     return _model;
 }
 

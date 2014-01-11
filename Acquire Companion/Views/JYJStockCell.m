@@ -10,11 +10,19 @@
 
 @implementation JYJStockCell
 
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+
+        NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
+        UIView *mainView = subviewArray[0];
+        
+        mainView.frame = self.bounds;
+        
+        [self addSubview:mainView];
+        
     }
     return self;
 }

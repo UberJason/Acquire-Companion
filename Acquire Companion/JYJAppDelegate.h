@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JYJGameManager.h"
-
+#import "JYJPlayerNameController.h"
 @interface JYJAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

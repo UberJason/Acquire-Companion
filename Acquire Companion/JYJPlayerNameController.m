@@ -38,7 +38,7 @@
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
     
-    self.numberOfPlayersTextField.text = [NSString stringWithFormat:@"%d", self.numberOfPlayers];
+    self.numberOfPlayersTextField.text = [NSString stringWithFormat:@"%ld", (long)self.numberOfPlayers];
     [self.numberOfPlayersTextField addGestureRecognizer:self.tap];
     self.numberOfPlayersTextField.textColor = [UIColor emeraldFlatColor];
     self.numberOfPlayersTextField.font = [UIFont boldSystemFontOfSize:17];
